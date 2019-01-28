@@ -20,9 +20,6 @@ else
 fi
 
 ip -6 addr add $ipv6addr dev $dev
-#2001:bc8:4400:2500::90b dev ens2
 ping6 -c2 -I ens2 ff02::1
 ip -6 route add $ipv6gtwy dev $dev
-#2001:bc8:4400:2500::90a dev ens2
 ip -6 route add default via $ipv6gtwy dev $dev
-#2001:bc8:4400:2500::90a dev ens2
